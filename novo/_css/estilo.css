@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+/* configuração do corpo*/
+@font-face{
+	font-family: 'FonteLogo';
+	src:url(../_fonts/bubblegum-sans-regular.otf);
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #eee;
+	color: #000000;
+}
+/* configuração da área interna*/
+#interface{
+	background-color: #fff;
+	width: 900px; /* largura */
+	margin: 0px auto 0px auto;	
+	box-shadow: 0px 0px 25px rgba(0,0,0,.5);
+	padding: 10px; /* espaçamento interno */
+}
+/* configuração do cabeçalho*/
+#cabecalho{
+	border-bottom: 1px #606060 solid;
+	height: 150px;
+	background: url(../_imagens/Apple_iPhone_7_Logo.jpg) no-repeat 0px 80px;
+}
+#cabecalho h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color:#606060;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+#cabecalho h2{
+	font-family: 'Titillium Web', sans-serif;
+	margin-bottom: 0px;
+	padding: 0px;
+	font-size: 15px;
+	color:#888;
+}
+/* configuração da imagem do cabeçalho*/
+#icone{ 
+	position: relative;
+	top: -30px;
+	left: 820px;
+}
+/* configuração do menu*/
+#menu{
+	display: block;
+}
+#menu h1{
+	display: none;
+}
+/* configuração do menu*/
+#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: relative;
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	top: -25px;
+}
+/* configuração dos itens de menu*/
+#menu li{
+	display: inline-block;
+	background-color: #ccc;
+	padding: 10px;
+	margin: 2px;
+}
+/* configuração dos links do menu*/
+#menu a{
+	color: #000;
+	text-decoration: none;
+}
+#menu li:hover{
+	background-color: #606060;
+	transition: background 1s;
+	color: #fff;
+}
+/* configurar a primeira coluna */
+#corpo{
+	display: block;
+	width: 485px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding: 0px 15px 15px 0px;
+}
+#noticia h2{
+	font-size: 12pt;
+	color:#606060;
+	background-color: #ddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+#noticia h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20px;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+#noticia h3{
+	font-size: 9pt;
+	color: #606060;
+}
+.direita{
+	text-align: right;
+}
+/* configuração dos parágrafos */
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+.foto-legenda{
+	position: relative;
+	border: 8px solid #fff;
+	box-shadow: 0px 0px 0px 10px #999999;
+}
+.foto-legenda img{
+	width: 100%;
+	height: 100%;
+}
+.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0,0,0,.4);
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: opacity 1s;
+}
+.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+#pFoto {
+	text-indent: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+#lateral{
+	display: block;
+	width: 349px;
+	float: right;
+	padding: 20px;
+	background-color: #ddd;
+	margin-top: 10px;
+}
+#lateral h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 0px;
+}
+#lateral h2{
+	background-color: #606060;
+	font-size: 15pt;
+	color: #fff;
+	padding: 5px;
+}
+#rodape{
+	clear:both;
+	border-top: 1px solid #606060;
+}
+#rodape p{
+	padding-top: 15px;
+	text-align: center;
+}
+#tabela{
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto; 
+}
+#tabela td{
+	border: 1px solid #606060;
+	padding: 10px;
+	vertical-align: top;
+}
+/* coluna da esquerda */
+#tabela .ce{
+	color:#fff;
+	background-color: #606060;
+	vertical-align: top;
+	font-weight: bold;
+	text-align: right;
+}
+/* coluna da direita */
+#tabela .cd{
+	background-color: #cecece;
+}
+/* legenda da tabela */
+#tabela caption{
+	color: #888;
+	font-size: 15px;
+	font-weight: bolder;
+}
+/* Mar/2013 */
+#tabela caption span{
+	display: block;
+	float: right;
+	color: #000;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+

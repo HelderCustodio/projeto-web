@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <meta charset="utf-8"/>
+      <title> Formulário de Contato </title>
+      <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+      <link rel="stylesheet" type="text/css" href="_css/form.css">
+      <script language="javascript" src="_javascript/funcoes.js">
+      </script>
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <nav id="menu">
+                    <h1> Menu Principal </h1>
+                       <ul>
+                <a href="index.html" onMouseOver="mudaFoto('_imagens/home.png')" onMouseOut="mudaFoto('_imagens/iphone7logpeg.png')">
+                  <li> Home </li>
+                </a>
+                           <a href="specs.html" onMouseOver="mudaFoto('_imagens/especificacoes.png')"
+                   onMouseOut="mudaFoto('_imagens/iphone7logpeg.png')"> <!-- chama a função que muda a foto quando passa o mouse lá -->
+                  <li> Especificações </li>
+                </a>
+                           <a href="fotos.html" onMouseOver="mudaFoto('_imagens/fotos.png')" onMouseOut="mudaFoto('_imagens/iphone7logpeg.png')">
+                  <li> Fotos </li>
+                </a>
+                           <a href="multimidia.html" onMouseOver="mudaFoto('_imagens/multimidia.png')"
+                            onMouseOut="mudaFoto('_imagens/iphone7logpeg.png')">
+                  <li> Multimídia </li>
+            </a>
+                           <a href="fale-conosco.html" onMouseOver="mudaFoto('_imagens/contato.png')" onMouseOut="mudaFoto('_imagens/iphone7logpeg.png')">
+                  <li> Fale conosco </li>
+                </a>
+                      </ul>
+          </nav>
+                <hgroup id="titulo">
+                    <h1> iPhone 7  </h1>
+                    <h2> Este é o 7 </h2>
+                </hgroup>
+                    <img id="icone" src="_imagens/iphone7logpeg.png"/>
+            </header>
+            <section id="corpo-inteiro"> <!-- html5 semântico - só serve para os motores de busca -->
+        <article id="noticia"> <!-- outro elemento semântico -->
+           <header> <!-- semântico também -->
+              <hgroup> <!-- semântico -->
+                 <h3> Fale Conosco > Contato </h3>
+                 <h1> Formulário de Contato </h1>
+                 <h2>por Helder Custodio</h2>
+                 <h3 class="direita"> Atualizado em 20/Março/2017 <h3>
+              </hgroup>
+            </header>
+
+            <form id="contato" method="post" action="_php/faleconosco.php">
+                <fieldset id="usuario">
+                    <legend> Identificação do Usuário </legend>
+                        <p>
+                            <label for="cNome">
+                             Nome:
+                            </label>
+                            <input type="text" name="tNome" id="cNome" placeholder="Nome completo"/>
+                        </p>
+                        <p>
+                            <label for="cSenha">
+                             Senha:
+                            </label>
+                            <input type="password" name="tSenha" id="cSenha" placeholder="8 dígitos"/>
+                        </p>
+                        <p>
+                            <label for="cEmail">
+                             E-mail:
+                            </label>
+                            <input type="email" name="tEmail" id="cEmail" placeholder="exemplo@mail.com.br"/>
+                        </p>
+                        <fieldset id="sexo">
+                            <legend> Sexo </legend>
+                            <input type="radio" name="tSexo" id="cMasc" value="Masculino"/>
+                                <label for="cMasc"> Masculino </label>
+                            <input type="radio" name="tSexo" id="cFem" value="Feminino"/>
+                                <label for="cFem"> Feminino </label>
+                        </fieldset>
+                        <p>
+                        <label for="cData">
+                            Data de Nascimento:
+                        </label>
+                        <input type="date" id="cData" name="tData"/>
+                        </p>
+                </fieldset>
+                <fieldset id="endereco">
+                    <legend> Endereço do Usuário </legend>
+                    <p>
+                      <label for="cLogradouro">
+                        Logradouro:
+                      </label>
+                      <input type="text" name="tLogradouro" 
+                        id="cLogradouro" placeholder="Av., Rua, etc..."/>
+                    </p>
+                    <p>
+                      <label for="cNumero">
+                        Número:
+                      </label>
+                      <input type="number" id="cNumero" name="tNumero"/>
+                    </p>
+                    <p>
+                      <label for="cEstado">
+                        Estado:
+                      </label>
+                      <select id="cEstado" name="tEstado">
+                        <option value="sp"> SP </option>
+                        <option value="rj"> RJ </option>
+                        <option value="mg"> MG </option>  
+                      </select>
+                    </p>
+                    <p>
+                      <label for="cCidade"> Cidade </label>
+                      <input type="text" name="tCidade" id="cCidade" list="cidades"/>
+                      <datalist id="cidades">
+                          <option value="franca"> 
+                            Franca
+                          </option>
+                          <option value="ibiraci">
+                            Ibiraci
+                          </option>
+                          <option value="ibitinga">
+                            Ibitinga
+                          </option>
+                      </datalist>
+                    </p>
+                </fieldset>
+                <fieldset id="mensagem">
+                  <legend> Mensagem do Usuário </legend>
+                  <p>
+                  <label for="cGrau">
+                    Grau de Urgência:
+                  </label>
+                    Mínimo
+                      <input type="range" id="cGrau" name="tGrau" min="0" max="10" step="2"/>
+                    Máximo 
+                  </p>
+                  <p>
+                    <label for="cMensagem"> 
+                        Mensagem:
+                    </label>
+                    <textarea id="cMensagem" name="tMensagem" placeholder="Deixe sua mensagem ..." cols="50" rows="10"></textarea>
+                  </p>
+                </fieldset>
+                <fieldset id="pedido">
+                    <legend> Quero um iPhone 7 </legend>
+                    <p>
+                    <input type="checkbox" id="cGostaria" name="tGostaria"/>
+                    <label for="cGostaria">
+                      Gostaria de adquirir um iPhone7 quando disponível
+                    </label>
+                    </p>
+                    <p>
+                      <label for="cCor"> Cor: </label>
+					  <input type="color" name="tCor" id="cCor" value="#000000"/>
+                    </p>
+                    <p>
+                      <label for="cQtde"> Quantidade </label>
+					  <input type="number" name="tQtde" id="cQtde"
+						min="0" max="5" value="0" onchange="calc_total()"/>
+                    </p>
+                    <p>
+                      <label for="cTotal"> Preço Total: R$ </label>
+					  <input type="text" name="tTotal" id="cTotal" 
+							placeholder="Total a pagar" readonly/>
+                    </p>
+                </fieldset>
+				<input type="image" name="tEnviar" 
+					src="_imagens/botao-enviar.png"/>
+            </form>
+        </article>
+            </section>
+    <footer id="rodape">
+      <p>Copyright 2017 - by Helder Custodio<br/>
+        Facebook | Twitter</p>
+        <footer>
+    </div>
+    </body>
+</html>
